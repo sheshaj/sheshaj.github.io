@@ -177,7 +177,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx_r1.stateName, " state data was last updated ", ctx_r1.lastUpdated, " ago");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx_r1.stateName, " state data was last updated about ", ctx_r1.lastUpdated, " ago");
       }
     }
 
@@ -431,10 +431,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (timeDifference / (1000 * 60) > 60) {
             lastUpdatedInHOrM = timeDifference / (1000 * 60 * 60);
-            timeIn = 'Hours';
+            timeIn = lastUpdatedInHOrM >= 2 ? 'Hours' : 'Hour';
           } else {
             lastUpdatedInHOrM = timeDifference / (1000 * 60);
-            timeIn = 'Minutes';
+            timeIn = lastUpdatedInHOrM >= 2 ? 'Minutes' : 'Minute';
           }
 
           this.lastUpdated = parseInt(lastUpdatedInHOrM) + ' ' + timeIn;
